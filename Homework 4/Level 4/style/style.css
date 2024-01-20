@@ -1,0 +1,49 @@
+.square {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    animation: square-animations 3.5s ease 0.1s infinite;
+    box-shadow: 18px 22px 35px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+@keyframes square-animations {
+    0% {
+
+        top: 0;
+        left: 0;
+        box-shadow: 18px 22px 25px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    25% {
+        background-color: blue;
+        left: 0;
+        top: 400px;
+        box-shadow: 18px -31px 25px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    50% {
+        background-color: green;
+        left: 400px;
+        top: 400px;
+        box-shadow: -33px -31px 25px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    75% {
+        background-color: yellow;
+        left: 400px;
+        top: 0;
+        box-shadow: -37px 22px 25px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    100% {
+        background-color: orange;
+        left: 0;
+        top: 0;
+        box-shadow: 18px 22px 25px 0px rgba(0, 0, 0, 0.75);
+
+
+    }
+}

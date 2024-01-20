@@ -1,0 +1,79 @@
+nav {
+    margin: 50px;
+}
+
+.menu_container {
+    margin-top: 20px;
+}
+
+.nav_menu {
+    width: 150px;
+    height: 280px;
+    background-color: grey;
+    overflow: hidden;
+    overflow: hidden;
+    width: 15px;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+.nav_menu::before {
+    content: "Menu here";
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 15px;
+    width: 150px;
+    height: 6px;
+    color: white;
+    left: -64px;
+    top: 60%;
+    transform: rotate(90deg);
+    transition: all .3s ease-in;
+}
+
+.nav_menu:hover {
+    width: 150px;
+}
+
+.nav_menu:hover::before {
+    opacity: 0;
+    left: -105px;
+}
+
+.nav_item {
+    text-transform: uppercase;
+}
+
+a {
+    display: block;
+    padding: 5px;
+    color: white;
+    left: 25px;
+    position: relative;
+    transition: all .2s ease-in;
+}
+
+a:hover {
+    color: orange;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    display: block;
+    background-color: orange;
+    border: 2px solid black;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+    transition: all .3s ease-in-out;
+}
+
+a:hover::before {
+    border: 1px solid black;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%) rotate(-135deg);
+}

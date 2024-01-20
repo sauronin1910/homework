@@ -1,0 +1,513 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(205, 202, 50);
+    height: 65px;
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    position: sticky;
+}
+
+
+
+/* burger menu */
+
+/* приховуємо чекбокс */
+.menu_nav1 {
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+/* стилізуємо кнопку */
+.menu__btn {
+    display: flex;
+    /* використовуємо flex для центрування вмісту */
+    align-items: center;
+    /* центруємо вміст кнопки */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* додаємо "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+/* контейнер меню */
+.header_nav {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(205, 202, 50);
+
+}
+
+/* елементи  меню */
+.menu__item a {
+    display: block;
+    padding: 12px 24px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu__item a:hover {
+    color: #ffffff;
+    background-color: rgb(93, 105, 200);
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(-135deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+#menu__toggle:checked~.header_nav {
+    visibility: visible;
+    right: 0;
+    width: 100%;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    transition-duration: .25s;
+}
+
+.header_nav {
+    transition-duration: .25s;
+}
+
+.menu__item {
+    transition-duration: .25s;
+}
+
+/* burger menu */
+
+/* приховуємо чекбокс */
+header {
+    top: 0;
+    position: sticky;
+    width: 100%;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+/* стилізуємо кнопку */
+.menu__btn {
+    display: flex;
+    /* використовуємо flex для центрування вмісту */
+    align-items: center;
+    /* центруємо вміст кнопки */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* додаємо "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+/* контейнер меню */
+.header_nav {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(205, 202, 50);
+    /* box-shadow: 1px 0px 6px rgba(0, 0, 0, .2); */
+}
+
+/* елементи  меню */
+.menu__item a {
+    display: block;
+    padding: 12px 24px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu__item a:hover {
+    color: #ffffff;
+    background-color: rgb(93, 105, 200);
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(-135deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+#menu__toggle:checked~.header_nav {
+    visibility: visible;
+    right: 0;
+    width: 100%;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    transition-duration: .25s;
+}
+
+.header_nav {
+    transition-duration: .25s;
+}
+
+.menu__item {
+    transition-duration: .25s;
+}
+
+
+
+/* MAIN */
+.container {
+    display: flex;
+}
+
+main {
+    width: 100%;
+    order: 2;
+}
+
+.aside1 {
+    background-color: pink;
+    flex: 4 4 280px;
+    padding: 10px;
+    order: 1;
+    display: none;
+}
+
+.main_content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aside2 {
+    padding: 10px;
+    background-color: rgb(157, 195, 220);
+    flex: 4 4 280px;
+    order: 3;
+    display: none;
+
+}
+
+.catalog_img {
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 10px solid plum;
+
+}
+
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    font-size: 26px;
+    padding: 10px;
+}
+
+p {
+    font-size: 17px;
+    text-align: center;
+    line-height: 19px;
+}
+
+.catalog_content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+}
+
+.catalog_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 30px;
+    flex: 1 1 250px;
+    padding: 10px;
+    transition: all 0.3s;
+
+}
+
+.catalog_item:hover {
+    background-color: rgb(5, 93, 200);
+    color: white;
+    border-radius: 60px;
+}
+
+.catalog_item:nth-child(2):hover {
+    background-color: rgb(230, 27, 0);
+}
+
+.catalog_item:nth-child(3):hover {
+    background-color: rgb(0, 170, 17);
+}
+
+.catalog_item:nth-child(4):hover {
+    background-color: rgb(197, 58, 8);
+}
+
+.catalog_item:nth-child(5):hover {
+    background-color: rgb(187, 7, 124);
+}
+
+.catalog_item:nth-child(6):hover {
+    background-color: rgb(84, 16, 210);
+}
+
+.catalog_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.title {
+    padding-top: 15px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.descr {
+    text-align: center;
+    padding: 15px;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+button {
+    width: 80px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 0 auto;
+    background-color: purple;
+    color: white;
+    transition: 0.3s;
+
+
+}
+
+button:hover {
+    background-color: #d763ab;
+}
+
+button:active {
+    background-color: #dd27b0;
+}
+
+.catalog_img {
+    width: 100px;
+}
+
+/* footer  */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #93f9a9;
+    min-height: 40px;
+}
+
+
+
+
+
+
+@media (min-width: 591px) {
+    button {
+        width: 60px;
+        height: 30px;
+
+    }
+}
+
+@media (min-width: 640px) {}
+
+@media (min-width: 708px) {
+
+    .menu_nav1 {
+        background-color: rgb(205, 202, 50);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .img img {
+        width: 180px;
+        cursor: pointer;
+    }
+
+
+    .header_nav1 {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .header_nav1 a {
+        color: black;
+        font-size: 19px;
+        text-transform: capitalize;
+        font-weight: 500;
+        position: relative;
+        transition: all .3s;
+
+    }
+
+    .menu__item1 a:hover {
+        color: rgb(196, 0, 98);
+
+    }
+
+    .menu__item1 a::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        transition: all .3s;
+    }
+
+    .menu__item1 a:hover::before {
+        position: absolute;
+        content: "";
+        background-color: rgb(196, 0, 98);
+        width: 100%;
+        height: 1px;
+    }
+
+
+
+
+    #menu__toggle,
+    .checkbox,
+    .menu__btn,
+    span {
+        display: none;
+    }
+
+    h1 {
+
+        font-size: 28px
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        width: 900px;
+        order: 2;
+    }
+
+    .aside1,
+    .aside2 {
+        display: block;
+    }
+}

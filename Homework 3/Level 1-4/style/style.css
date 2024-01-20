@@ -1,0 +1,65 @@
+h1 {
+    margin: 20px;
+    font-weight: 900;
+}
+
+/* level 2 */
+
+.block {
+    width: 350px;
+    height: 220px;
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 30px;
+    border: 2px dashed red;
+    background-color: green;
+
+}
+
+div {
+    margin: 15px;
+}
+
+/* level 3 */
+
+.article {
+    width: 900px;
+}
+
+img {
+    margin: 10px;
+    float: left;
+}
+
+.img2 {
+    margin: 10px;
+    width: 200px;
+    float: right;
+}
+
+/* level 4 */
+
+.list {
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+ul {
+    display: block;
+    margin: 10px 0 10px 40px;
+}
+
+li {
+    position: relative;
+}
+
+li:before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    left: -29px;
+    top: 6px;
+}

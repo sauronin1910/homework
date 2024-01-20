@@ -1,0 +1,72 @@
+/* level 2 */
+
+.holder {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+a[href^="https://"] {
+    color: #f00;
+}
+
+li:first-child [href^="https://"] {
+    color: #ff8d00;
+}
+/*
+те саме тільки через конкретне значення атрибуту "title" та ":nth-child(1)"
+навів, як другий спосіб 
+
+li:nth-child(1) [title="youtube"] { 
+    color: #ff8d00;
+} */ 
+
+p { 
+    font-size: 26px;
+}
+
+a[title] {
+    border: 1px solid #067b09;
+        
+}
+
+/* level 3 */
+
+.text-box {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.text-box h3 {
+    color: pink;
+}
+
+.text-box p {
+    font-size: initial;
+}
+
+#greycol { 
+    color: grey;
+
+}
+.text-box div p { 
+    color: red
+}
+
+.text-box h3:nth-of-type(2) {
+    color: initial;
+    font-size: initial;
+    font-weight: initial;
+
+}
+
+
+.text-box p:nth-of-type(3) {
+    color: green;
+}
+
+p.yellow {
+    color: yellow;
+}
+
+
